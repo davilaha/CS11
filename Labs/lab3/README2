@@ -1,3 +1,5 @@
+
+
 =======================================
 example1                              =
 =======================================
@@ -51,3 +53,5 @@ Since example1 is not a Java source file, one expects to get only error.
 messages from the compiler. errors you get from javac go to stderr.
 
 The line javac example1 >& comp-errs places those errors in the file comp-errs.
+
+
