@@ -1,0 +1,199 @@
+//---------------------------------------------------------------------------------------
+//
+//   LetterHome.java                                     
+//
+//   This program automatically generates a letter home from a student who is too busy
+//   to write one the old fashioned way.  Instead, the program encodes certain stock
+//   phrases as positive integers.  These phrases are included in the letter by putting
+//   the corresponding numbers into a data file (see the accompanying files letter1.dat,
+//   letter2.dat, and letter3.dat) to be used as program input.  One example of such a
+//   letter is:
+//
+//             Dear Mom and Dad:
+//
+//             My classes are going great.
+//             The weather here has been foggy.
+//             I plan to come home for a visit in a few weeks.
+//             Do you think you could send me $50?
+//             I have to buy another book for one of my classes.
+//             Thanks for the cookies you sent.
+//
+//
+//   The general template for the letter body is:
+//
+//             1. My classes are going _____.
+//                  1. great
+//                  2. ok
+//             2. The weather here has been _____.
+//                  1. great
+//                  2. foggy
+//                  3. hot
+//                  4. cold
+//                  5. variable
+//             3. I plan to come home for a visit _____.
+//                  1. after the quarter ends
+//                  2. in a few weeks
+//                  3. next weekend
+//             4. Do you think you could send me $_____?
+//                I have to buy another book for one of my classes.
+//             5. Thanks for the _____ you sent.
+//                  1. cookies
+//                  2. stuff
+//                  3. money
+//
+//
+//   Thus, to encode the above example, the data file should contain the numbers
+//
+//             1 1
+//             2 2
+//             3 2
+//             4 50
+//             5 1
+//
+//   One need not generate the sentences in numerical order, and not all sentences need
+//   to be included.  This adds to the variety of letters produced.  For instance, the
+//   data file
+//
+//             5 2
+//             1 1
+//             2 5
+//             3 2
+//
+//   generates the letter:
+//
+//             Dear Mom and Dad:
+//
+//             Thanks for the stuff you sent.
+//             My classes are going great.
+//             The weather here has been variable.
+//             I plan to come home for a visit in a few weeks.
+//
+//
+//   Unfortunately this program contains some errors.  Compile this program, then run it
+//   on a given input file (letter1.dat say)  by doing:
+//
+//             % java LetterHome letter1.dat
+//
+//   The expected output corresponding to letter1.dat is:
+//
+//             Dear Mom and Dad:
+//
+//             Thanks for the stuff you sent.
+//             My classes are going great.
+//             The weather here has been great.
+//             I plan to come home for a visit in a few weeks.
+//
+//   Instead, the actual output is:
+//
+//             Dear Mom and Dad:
+//
+//             5 is not a valid sentence code
+//             My classes are going great.
+//             The weather here has been foggy.
+//             I plan to come home for a visit in a few weeks.
+//
+//   It will be your task in Lab Assignment 5 to debug this program by using the
+//   jdb debugger.  See the lab5 project description for more details on debugging
+//   and using jdb.  In the mean time, study this code to get some idea of how the
+//   program works.
+//
+//---------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+import java.io.File;
+
+class LetterHome{
+
+   static final int MAX_CODE = 5;
+
+   public static void main(String[] args) throws Exception{
+      Scanner in = new Scanner(new File(args[0]));
+      String phrase;
+      int sentenceCode, modifierCode;
+
+      // print heading
+      System.out.println("Dear Mom and Dad:\n");
+
+      // print encoded sentences
+      while( in.hasNext() ){
+
+         // read a pair of sentence and modifier codes
+         sentenceCode = in.nextInt();
+         modifierCode = in.nextInt();
+
+         // make sure the sentenceCode is within range
+         if( (sentenceCode < 1) || (sentenceCode >= MAX_CODE) ) {
+            System.out.println(sentenceCode + " is not a valid sentence code");
+            continue;
+         }
+
+         // print the appropriate sentence with modifier
+         if( sentenceCode == 1 ){
+            if( modifierCode == 1 ){
+               phrase = "great";
+            }else if( modifierCode == 2 ){
+               phrase = "ok";
+            }else{
+               phrase = "ERROR";
+            }
+            System.out.println("My classes are going " + phrase + ".");
+
+         }else if( sentenceCode == 2 ){
+            phrase = weatherModifier(modifierCode);
+            System.out.println("The weather here has been " + phrase + ".");
+
+         }else if( sentenceCode == 3 ){
+            if( modifierCode == 1 ){
+               phrase = "after the quarter ends";
+            }else if( modifierCode == 2 ){
+               phrase = "in a few weeks";
+            }else if( modifierCode == 3 ){
+               phrase = "next weekend";
+            }else{
+               phrase = "ERROR";
+            }
+            System.out.println("I plan to come home for a visit " + phrase + ".");
+
+         }else if( sentenceCode == 4 ){
+            System.out.println("Do you think you could send me $" + modifierCode + "?");
+            System.out.println("I have to buy another book for one of my classes.");
+
+         }else if( sentenceCode == 5 ){
+            if( modifierCode == 1 ){
+               phrase = "cookies";
+            }else if( modifierCode == 2 ){
+               phrase = "stuff";
+            }else; if( modifierCode == 3 ){
+               phrase = "money";
+            }else{
+               phrase = "ERROR";
+            }
+            System.out.println("Thanks for the " + phrase + " you sent.");
+         }
+      }
+   }
+
+
+   // weatherModifier()
+   // returns the correct word for a weather sentence
+   static String weatherModifier(int m) {
+      String word=null;
+
+      // select weather modifier
+      if(m == 1)
+         word = "great";
+      if(m == 2);
+         word = "foggy";
+      if(m == 3)
+         word = "hot";
+      if(m == 4)
+         word = "cold";
+      if(m == 5)
+         word = "variable";
+      if( m<1 || m>5)
+         word = "ERROR";
+
+      return word;
+   }
+
+}
