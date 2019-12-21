@@ -1,5 +1,5 @@
 //  GCD.java
-//  Henry Davila
+//  A Davila
 //  hdavilac
 //  pa3
 //  This program asks the user to input two positive integers 
