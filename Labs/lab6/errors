@@ -1,1 +1,12 @@
+I found 7 errors:
 
+1) 'books' should be 'book' instead of being plural.
+2) 2 4 the out put says 'last weekend' instead of 'next weekend'.
+3) When the modifier code is out of bounds in [5 4], it prints out "Thanks for the ERROR"
+   it should say "Thanks for the ERROR you sent."
+4) When an invalid number for the dollar is entered, the program crashes, and throws
+   input.mismatch.exception when x< -2,147,483,647 and x > 2147,483,647.
+5) When the sentence code is bigger than 5, ex.[7,2], it prints out: "7 is a valid sentence code."
+   it should print out "7 is an invalid sentence code."
+6) "Thanks for the stuff you sent " does not have a period at the end like it should.
+7) "weather has been hot." should say "weather has been cold." [5 4] 
