@@ -1,0 +1,21 @@
+/afs/cats.ucsc.edu/users/b/hdavilac/cs11/lab2
+
+Access list for public is
+Normal rights:
+  system:operator rlidwk
+  system:authuser rlid
+  system:anyuser rl
+  hdavilac rlidwka
+
+Access list for private is
+Normal rights:
+  hdavilac rlidwka
+
+total 7
+-rw-r--r--. 1 hdavilac users  426 Apr 18 15:31 HelloWorld.class
+drwx------. 2 hdavilac users 2048 Apr 18 15:04 private
+-rwxr--r--. 1 hdavilac users  192 Apr 18 15:45 prog
+drwxr-xr-x. 2 hdavilac users 2048 Apr 18 15:04 public
+-rw-r--r--. 1 hdavilac users  238 Apr 18 15:47 result
+
+Hello, lab2!
