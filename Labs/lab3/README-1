@@ -1,0 +1,11 @@
+
+Copy of my program Lawn.java from pa1 into the lab3 directory.
+Wrote a bash script called RunLawn that performs the following operations:
+
+1. Print the line compiling Lawn.java to stdout.
+2. Compile the program Lawn.java, sending any errors or warnings to the file Lawn-errs.
+3. Print the line running Lawn.class to stdout.
+4. Run the Java executable Lawn.class, reading input from a file called Lawn-in and sending output to
+a file called Lawn-out.
+5. Print the line deleting Lawn.class to stdout.
+6. Remove the file Lawn.class from the current directory
