@@ -2,7 +2,7 @@
 /************************************************************
 * Lawn.java
 * Alex Davila
-* hdavilac
+
 * Programming Assignment 1
 * 	This program asks the user for input on dimensions of a house and
 	the dimensions of the lot in which the house sits on
