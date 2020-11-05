@@ -1,8 +1,9 @@
-//Queens.java 
-//Alex Davila 
-//hdavilac
-//pa5 
-//In this assignment a Java program that finds all solutions to the n-Queens problem, for 1  n  13.
+/* Queens.java 
+   A Davila 
+   pa5 
+
+In this assignment a Java program that finds all solutions to the n-Queens problem, for 1  n  13 */
+
 
 class Queens{
     public static void main(String[] args){
