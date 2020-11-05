@@ -1,11 +1,11 @@
-//  GCD.java
-//  A Davila
-//  hdavilac
-//  pa3
-//  This program asks the user to input two positive integers 
-//  and will keep asking for integers when something other 
-//  than an integer is entered.
-//  returns the GCD of these two inputs. 
+ /*GCD.java
+   A Davila
+ 
+ 
+  This program asks the user to input two positive integers 
+  and will keep asking for integers when something other 
+  than an integer is entered.
+  returns the GCD of these two inputs. */
 
 import java.util.Scanner;
 
