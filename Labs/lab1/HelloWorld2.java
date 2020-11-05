@@ -1,7 +1,7 @@
-// HelloWorld2.java
-// Alex Davila
-// lab1
-// prints greeting and some system information.
+/* HelloWorld2.java
+   Alex Davila
+   lab1
+   prints greeting and some system information.  */
 
 class HelloWorld2{
   public static void main( String[] args ){
