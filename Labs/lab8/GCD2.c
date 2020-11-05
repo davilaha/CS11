@@ -1,3 +1,8 @@
+/* A Davila
+   GDC ver 2
+   
+   This program is a more simple way to code GDC*/
+
 #include <stdio.h>
 int main(){
     int n1, n2, i, gcd;
