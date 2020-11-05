@@ -1,10 +1,9 @@
-// Roots1.java
-// Alex Davila
-// Partner: Ravina G.
-// 1465932
-// hdavilac@ucsc.edu
-// pa 4
-// Calculates the roots of an nth degree polynomial 
+/*  Roots1.java
+    Alex Davila
+    Partner: Ravina G.
+    pa4
+
+Calculates the roots of an nth degree polynomial  */
 
 
 
