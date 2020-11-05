@@ -1,12 +1,9 @@
 //-----------------------------------------------------------------------------
 // Complex.java
-// Henry Davila
+// A Davila
 // pa6
 // Represents complex numbers as a pair of doubles
 //
-// pa6
-// Fill in the function definitions below. See class notes, or the project 
-// description for the definitions of the complex arithmetic operations.
 //-----------------------------------------------------------------------------
 
 class Complex{
