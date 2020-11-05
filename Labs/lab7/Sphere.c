@@ -1,8 +1,9 @@
-//A Davila
-//lab7
-//hdavilac
+// A Davila
+// lab7
 
-     /* Sphere.c */
+/* Sphere.c is an intro to the C language, given the radious of a sphere, it calculates its volume and SFC A*/
+
+
 #include<stdio.h>
     
 int main(void){
