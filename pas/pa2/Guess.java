@@ -1,10 +1,12 @@
-//Guess.java
-//Henry A. Davila
-//pa2
-// This program asks the monkey at the keybord for three guesses to a number
-//from 1 to 10 that the computer ramndomly choses. Its a guessing game and the player
-//has only three chnaces to win. If player doesn't guess it after three tries,
-//palyer loses and game ends. If player guesses after or before 3 tries, game ends.
+/* Guess.java
+   A. Davila
+   pa2*/
+
+/* This program asks the user at the keybord for three guesses to a number
+from 1 to 10 that the computer ramndomly choses. Its a guessing game and the player
+has only three chnaces to win. If player doesn't guess it after three tries,
+palyer loses and game ends. If player guesses after or before 3 tries, game ends.
+*/
 
 import java.util.Scanner;
 
