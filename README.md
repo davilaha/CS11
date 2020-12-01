@@ -19,5 +19,3 @@ There are 6 Programs (pa's):
   pa 4. <Roots.java> Java program that determines the real roots of a polynomial that lie within a specified range
   pa 5. <Queens.java> Java program that finds all solutions to the n-Queens problem, Eight Queens Puzzle
   pa 6. <Complex.java> Represents complex numbers as a pair of double values
-
- 
